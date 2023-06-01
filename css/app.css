@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#1d303a, #24253e);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor__principal {
+  max-width: 95%;
+  margin: 0px auto;
+  padding-top: 15px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 576px) {
+  .contenedor__principal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .contenedor__principal {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__principal {
+    max-width: 70%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.contenedor__principal .caja {
+  background-color: #181818;
+  border-radius: 4px;
+  height: 245px;
+  display: flex;
+  text-decoration: none;
+  transition: background-color 0.6s;
+}
+.contenedor__principal .caja:hover .caja__principal {
+  align-self: center;
+  height: 170px;
+  transition: background-color 0.6s, height 0.6s;
+}
+.contenedor__principal .caja:hover .caja__principal a {
+  display: block;
+}
+.contenedor__principal .caja:hover .caja__principal i {
+  position: absolute;
+  animation-name: transicionIcon;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.contenedor__principal .caja:hover {
+  background-color: transparent;
+}
+.contenedor__principal .caja:hover .caja__windows {
+  background-color: #3a4c9e;
+}
+.contenedor__principal .caja:hover .caja__windows a {
+  background-color: #607dff;
+}
+.contenedor__principal .caja:hover .caja__apple {
+  background-color: #aa3636;
+}
+.contenedor__principal .caja:hover .caja__apple a {
+  background-color: #ff5454;
+}
+.contenedor__principal .caja:hover .caja_ubuntu {
+  background-color: #fe5537;
+}
+.contenedor__principal .caja:hover .caja_ubuntu a {
+  background-color: #ff8670;
+}
+.contenedor__principal .caja:hover .caja__android {
+  background-color: #3a9e4b;
+}
+.contenedor__principal .caja:hover .caja__android a {
+  background-color: #60ff7b;
+}
+
+.caja .caja__principal {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  padding: 55px 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e8e8e8;
+}
+.caja .caja__principal i {
+  font-size: 70px;
+  margin-bottom: 7px;
+}
+.caja .caja__principal span {
+  font-size: 13px;
+}
+.caja .caja__principal a {
+  display: none;
+  color: black;
+  margin-top: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+@keyframes transicionIcon {
+  to {
+    margin-top: -100px;
+  }
+  from {
+    margin-top: -50px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
